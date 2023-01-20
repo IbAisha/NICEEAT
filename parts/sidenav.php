@@ -14,11 +14,11 @@
       </ul>
 
       <div class="logo-insta">
-      <a href="http://instagram.com/byniceeat" id="insta-logo"><img src="./img/insta-logo.png"  width="40px" alt="logo instagram"></a>
-      <a href="http://instagram.com/byniceeat" id="insta-tiktok"><img src="./img/insta-tiktok.png"  width="40px" alt="logo tiktok"></a>
+      <a href="http://instagram.com/byniceeat" id="insta-logo"><img src="./img/logo-insta.png"  width="40px" alt="logo instagram"></a>
+      <a href="http://instagram.com/byniceeat" id="insta-tiktok"><img src="./img/logo-tiktok.png"  width="40px" alt="logo tiktok"></a>
       </div>
     
       
 </div>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
