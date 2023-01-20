@@ -1,0 +1,223 @@
+/*UL LI DE LA NAVBAR*/
+
+body {
+    margin:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-between;
+    background-color: #FCF8F1;
+    opacity: 0.8;
+    top: 0;
+    padding: 1rem;
+}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*BUTTON CONNEXION ET INSCRIPTION*/
+
+.buttons>button{
+    width: 100px;
+    padding: 7px;
+    border-radius: 25px;
+    border: 0.5px black solid;
+}
+
+.buttons>button>a {
+    color: black;
+    text-decoration: none;
+}
+
+#login {
+    background-color: white;
+}
+
+#signup {
+    background-color: #FFDC62 ;
+}
+
+#login:hover, #signup:hover {
+    background-color: black;
+}
+
+#login:hover>a, #signup:hover>a {
+    color: #FFDC62;
+}
+
+
+/* .......SIDENAV............... */
+
+.burger-line {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin-top: 5px;
+}
+
+/* SIDENAV SHAPE */
+
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index:1;
+    top : 0;
+    left:-250px;
+    background-color:#FCF8F1;
+    opacity: 0.9;
+}
+/*UL DE LA SIDEBAR */
+ul {
+    margin-top: 100px;
+}
+
+li{
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+ul li>a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s ease; 
+}
+
+ul li>a:hover {
+    color: #FFDC62;
+    text-shadow: black 2px 2px 2px ;  
+}
+
+.sidenav.active {
+    left : 0;
+}
+
+.sidenav .close {
+    position : absolute;
+    top : 10px ;
+    left: 25px ;
+}
+
+#top-cross {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin-top: 30px;
+    transform: rotate(-45deg);
+}
+
+#bottom-cross {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin-top: -4px;
+    transform: rotate(45deg);
+}
+
+
+/*.....MAIN......*/
+
+.text-menu>h2 {
+    font-size: 1rem;
+    margin: 0 20px;
+}
+
+.text-menu>p {
+    margin: 0 20px;
+
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline #FFDC62;
+
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card>img {
+    border-radius: 2px;
+}
+
+.boxText {
+    width: 160px;
+    box-shadow: 0.2px 0.2px 2px grey;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+span {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+p {
+    font-size: 0.9em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* MEDIA QUERIES */
+
+/*TELEPHONE/TABLET*/
+@media only screen and (max-width: 768px) { 
+      
+    .buttons, .list-navbar{
+        display: none;
+    }
+    .list-navbar>ul li {
+        display: none;
+    }
+}
+
+
+/*DESKTOP*/
+
+@media only screen and (min-width: 768px) { 
+
+/*Navbar*/
+#logo-icon, #openBtn, .sidenav, .sidenav.active, #logo-niceeat  {
+    display: none;
+}
+
+.list-navbar>ul li {
+    display: inline;
+}
+footer>ul li{
+    display: inline;
+    font-size: 0.9em;
+}
+
+ul, li{
+    margin: 0 0.5rem;
+    padding: 0;
+}
+footer {
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #FCF8F1;
+    opacity: 0.8;
+    padding: 0.5rem 0;
+}
+
+#deconnexion {
+
+}
+}
