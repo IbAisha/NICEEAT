@@ -38,8 +38,6 @@
     </div>
 
 
-<?php require_once "sidenav.php"; ?>
-
 
     <!--DESKTOP-->
 
@@ -50,6 +48,8 @@
 
 
     </nav>
+
+    <?php require_once "sidenav.php"; ?>
   
   <!--END NAVBAR SECTION-->
 

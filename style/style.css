@@ -76,7 +76,7 @@ nav {
     top : 0;
     left:-300px;
     background-color:#FCF8F1;
-    opacity: 0.97;
+    opacity: 0.95;
 }
 
 /*UL DE LA SIDEBAR */
@@ -165,6 +165,84 @@ ul li>a:hover {
     font-weight: bolder;
 }
 
+/*BOUTON DECOUVRIR L'OFFRE*/
+
+#offreBouton {
+    display: flex;
+    justify-content: center;
+}    
+
+#offreBouton>a  { 
+    font-family: 'Quicksand', sans-serif;
+    border: black 0.5px solid;
+    margin-top: 50px;
+    background-color: #FFDC62;
+    padding: 10px 25px;
+    border-radius: 40px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+#offreBouton>a:hover {
+   background-color: black;
+   color: #FFDC62;
+}
+
+
+
+
+@media only screen and (min-width: 768px) { 
+
+
+    #logo-icon, #openBtn, .sidenav, .sidenav.active, #logo-niceeat  {
+        display: none;
+    }
+
+    .list-navbar>ul li {
+        display: inline;
+    }
+    footer>ul li{
+        display: inline;
+        font-size: 0.9em;
+    }
+
+   ul, li{
+        margin: 0 0.5rem;
+        padding: 0;
+    }
+    footer {
+        display: flex;
+        justify-content:space-around;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background-color: #FCF8F1;
+        opacity: 0.8;
+        padding: 0.5rem 0;
+    }
+  }
+/*MEDIA QUERIES*/
+
+  /* sur mobile et tablette*/
+  @media only screen and (max-width: 768px) { 
+      
+    .buttons, .list-navbar{
+        display: none;
+    }
+    .list-navbar>ul li {
+        display: none;
+    }
+
+    
+    #logo-niceeat {
+        display: flex;
+        justify-content: center;
+    }
+    footer {
+        display: none;
+    }
+     
+  }
 
 
 
