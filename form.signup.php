@@ -1,7 +1,7 @@
 <?php 
     require_once "parts/nav.style.php";
     require_once "parts/nav.form.php";
-    require_once("./config.signup.php");
+    ;
     ?> 
   
         <div id="formCase">
@@ -12,6 +12,7 @@
           
 
             <div class="center" id="input">
+            <?php require_once("./config.signup.php"); ?>
                 
                     <label for="nom">Nom :</label>
                     <input type="text" name="nom" id="nom" required>

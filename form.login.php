@@ -3,6 +3,7 @@
    
    require_once("./parts/nav.style.php");
    require_once "./parts/nav.form.php";
+   
    ?>
    
    <div id="formCase">
@@ -11,7 +12,7 @@
 
        <h2 class="textCenter">Connectez-vous</h2>
 
-       <?php //require_once('config.login.php');
+       <?php require_once('config.login.php');
         ?>
 
        <div class="center" id="input">
@@ -33,7 +34,7 @@
           
 
            <div id="validate-button">
-               <button type ="submit" name="button"> Connexion</button>
+               <button type ="submit" name="button">Connexion</button>
            </div>
        </div>
        

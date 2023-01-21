@@ -2,28 +2,30 @@
 
 require_once "connect.php";
 
- if(isset($_POST['button'])){
+if(isset($_POST['button'])){
         if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['pswd'])) {
                 $nom = htmlentities($_POST['nom']);
                 $prenom = htmlentities($_POST['prenom']);
                 $email = filter_var(($_POST['email']), FILTER_VALIDATE_EMAIL);
-                $pswd = password_hash($_POST['pswd'], PASSWORD_ARGON2ID);
+                $pswd = password_hash($_POST['pswd'], PASSWORD_ARGON2ID); 
+         
+                if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+                        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);  
+                        $connect = mysqli_connect("localhost", "root", "root", "nice_eat");  
+                        $stmt = mysqli_prepare($connect, "INSERT INTO users (nom, prenom, email, pswd) VALUES (?,?,?,?)");
+                        mysqli_stmt_bind_param($stmt, "ssss", $nom, $prenom, $email, $pswd);
+                        mysqli_stmt_execute($stmt);
 
-         //Ajoutez ici tous les COntroles souhaités 
-        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+                ?> <div class="valid-box">
+                        <p style="color:green">Inscription enrigstrée</p>
 
-                if ($stmt = $connexion->prepare("INSERT INTO `users` (`id`, `nom`, `prenom`, `email`, `pswd`) VALUES (NULL, '$nom', '$prenom', '$email', '$pswd');")){
-                        $pswd = md5($pswd);
-                        $stmt->bind_param('ss', $email, $pswd);
-                        $stmt->execute();
-                        $stmt->close();
-
-                        echo "inscription enregristré";
-                    } else {
-                        echo "query error <b>".$conexion->error."</b><br>";
-                    }
-            }
-    }
- }
+                </div><?php;
+                $query = "SELECT * FROM users";
+                $result = mysqli_query($link, $query);
+                $row = mysqli_fetch_row($result); ?>
+                <?php }
+                               
+        }
+}
 
 ?>

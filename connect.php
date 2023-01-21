@@ -1,6 +1,6 @@
 <?php 
 
-$server_name = "localhost";
+        $server_name = "localhost";
          $user = "root";
          $password = "root";
          $bdd_name = "nice_eat";
