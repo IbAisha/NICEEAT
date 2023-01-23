@@ -188,7 +188,26 @@ ul li>a:hover {
    color: #FFDC62;
 }
 
+/*when is connected - mobile*/
 
+#is-connected>ul li>a{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+#is-connected>ul {
+    padding: 0;
+    margin: 0;
+}
+
+#is-connected>li {
+    margin: 0;
+}
+
+/* DESKTOP */
 
 
 @media only screen and (min-width: 768px) { 
@@ -233,7 +252,11 @@ ul li>a:hover {
         display: none;
     }
 
-    
+    #is-connected>ul li{
+        margin: 0;
+        padding: 0;
+    }
+
     #logo-niceeat {
         display: flex;
         justify-content: center;

@@ -197,6 +197,11 @@ p {
 .list-navbar>ul li {
     display: inline;
 }
+
+#is-connected>ul li{
+    margin: 0;
+    padding: 0;
+}
 footer>ul li{
     display: inline;
     font-size: 0.9em;

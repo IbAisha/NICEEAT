@@ -24,4 +24,4 @@ require_once("./cards/menus.card.php");
 </main>
 
 <?php require_once "parts/footer.php"; ?>
-<script src="main.js"></script>
+<script src="js/main.js"></script>

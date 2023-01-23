@@ -1,7 +1,5 @@
 <?php 
 
-require_once "connect.php";
-
 if(isset($_POST['button'])){
         if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['pswd'])) {
                 $nom = htmlentities($_POST['nom']);

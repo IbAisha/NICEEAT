@@ -1,3 +1,6 @@
+<?php require_once "config.login.php";?>
+
+
 <body>
 <nav>
     <!--hamburger menu-->
@@ -10,7 +13,6 @@
       </div>
     </a>
     
-
     <!--Laptop-->
 
     <div class="list-navbar">
@@ -18,10 +20,9 @@
           <li><a href="./index.php">Accueil</a></li>
           <li><a href="./menus.php">Nos menus</a></li>
           <li><a href="./snacking.php">Nos snacks</a></li>
-          <li><a href="./snacking.php">Click & collect</a></li>
+          <li><a href="../snacking.php">Click & collect</a></li>
         </ul>
     </div>
-
 
     <!--LOGO AU CENTRE DE LA NAVBAR-->
     <a href="./index.php" id="logo-niceeat"><img src="./img/logoBlack.png" alt="logo NiceEat" width ="100px"></a>
@@ -29,15 +30,38 @@
 
     <!--ICON LOGIN-->
 
-    <!--TEL/TABLET-->
-
-    <div class="icon">
-        <a href="form.login.php" id="logo-icon">
+    <!--DESKTOP-->
+    <?php
+    
+    if(!empty($_SESSION["nom"] && $_SESSION["prenom"] && $_SESSION['email'])){ ?>
+   <div class="icon" style="display:none">
+        <a href="./form.login.php" id="logo-icon">
         <img src="./img/login-icon.png"  alt="logo de connexion" width="40px">
       </a>
     </div>
 
+    <div class="buttons" style="display:none">
+      <button id="login"><a href="./form.login.php">Se connecter</a></button>
+      <button id="signup"><a href="./form.signup.php">S'inscrire</a></button>
+    </div>
 
+
+    <div id="is-connected">
+      <ul>
+        <li><a href="myaccount.php">Mon compte</a></li>
+        <li><a href="deconnexion.php">Se déconnecter</a></li>
+      </ul>
+    </div>
+
+ 
+</div>
+
+    <?php }else{?>
+      <div class="icon">
+        <a href="./form.login.php" id="logo-icon">
+        <img src="./img/login-icon.png" alt="logo de connexion" width="40px">
+      </a>
+    </div>
 
     <!--DESKTOP-->
 
@@ -46,6 +70,8 @@
       <button id="signup"><a href="./form.signup.php">S'inscrire</a></button>
     </div>
 
+    <?php };?>
+
 
     </nav>
 
@@ -53,5 +79,5 @@
   
   <!--END NAVBAR SECTION-->
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>

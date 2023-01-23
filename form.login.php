@@ -1,8 +1,8 @@
   
     <?php 
    
-   require_once("./parts/nav.style.php");
-   require_once "./parts/nav.form.php";
+   require_once("parts/nav.style.php");
+   require_once "parts/nav.form.php";
    
    ?>
    

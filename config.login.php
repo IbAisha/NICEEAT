@@ -1,7 +1,5 @@
 <?php
 
-require_once('./connect.php');
-
 //PARTIE CONNEXION 
 
 function session($nom, $prenom) {
@@ -12,7 +10,6 @@ function session($nom, $prenom) {
 
 
 function connexion() {
-
      if(isset($_POST['button'])){
          if(isset($_POST["email"], $_POST["pswd"])) {
             
@@ -27,7 +24,7 @@ function connexion() {
                 <span style="color:red"> Email ou mot de passe incorrect</span> <?php
             }else if(!empty($email) && !empty($pswd) && password_verify($pswd, $res[4])) {
                 session($res[1], $res[2]);
-                   header("Location: welcome.php");
+                   header("Location: index.php");
                    exit(0);
               } else if(empty($email) || empty($pswd)){?> 
                 <span>Veuillez entrer les champs obligatoires</span><?php

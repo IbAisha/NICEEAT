@@ -45,3 +45,24 @@ $menus = [
     ]
 
   ];
+
+  $snacks = [
+    [
+      "title" => "Bounty",
+      "coverImage"=> "./img/bounty.jpg",
+      "category"=> "snacks",
+      "description" => "Chocolat et noix de coco",
+    ],
+    [
+      "title" => "Cookies",
+      "coverImage"=> "./img/cookie.jpg",
+      "category"=> "skacks",
+      "description" => "cookie au noix et petites de chocolat",
+    ],
+    [
+      "title" => "Jus",
+      "coverImage"=> "./img/jus.jpg",
+      "category"=> "Boissons",
+      "description" => "pomme, mangue",
+    ]
+    ]; 
