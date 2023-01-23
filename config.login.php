@@ -10,6 +10,7 @@ function session($nom, $prenom) {
 
 
 function connexion() {
+
      if(isset($_POST['button'])){
          if(isset($_POST["email"], $_POST["pswd"])) {
             

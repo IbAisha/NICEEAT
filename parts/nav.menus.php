@@ -1,7 +1,5 @@
 <?php 
-
 session_start();
-ob_start();
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +15,3 @@ ob_start();
 </head>
 
 <?php require_once "navbar.php"; ?>
-
-
-<?php ob_end_flush(); ?>

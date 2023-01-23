@@ -3,6 +3,7 @@
    
    require_once("parts/nav.style.php");
    require_once "parts/nav.form.php";
+  
    
    ?>
    
@@ -12,8 +13,7 @@
 
        <h2 class="textCenter">Connectez-vous</h2>
 
-       <?php require_once('config.login.php');
-        ?>
+       <?php require("config.login.php"); ?>
 
        <div class="center" id="input">
            <div id="emailInput">

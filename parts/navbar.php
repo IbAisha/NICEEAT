@@ -1,6 +1,3 @@
-<?php require_once "config.login.php";?>
-
-
 <body>
 <nav>
     <!--hamburger menu-->
@@ -20,7 +17,7 @@
           <li><a href="./index.php">Accueil</a></li>
           <li><a href="./menus.php">Nos menus</a></li>
           <li><a href="./snacking.php">Nos snacks</a></li>
-          <li><a href="../snacking.php">Click & collect</a></li>
+          <li><a href="./clickncollect.php">Click & collect</a></li>
         </ul>
     </div>
 
@@ -33,7 +30,7 @@
     <!--DESKTOP-->
     <?php
     
-    if(!empty($_SESSION["nom"] && $_SESSION["prenom"] && $_SESSION['email'])){ ?>
+    if(!empty($_SESSION["nom"]) && ($_SESSION["prenom"]) && ($_SESSION['email'])){ ?>
    <div class="icon" style="display:none">
         <a href="./form.login.php" id="logo-icon">
         <img src="./img/login-icon.png"  alt="logo de connexion" width="40px">
@@ -46,11 +43,15 @@
     </div>
 
 
-    <div id="is-connected">
-      <ul>
-        <li><a href="myaccount.php">Mon compte</a></li>
-        <li><a href="deconnexion.php">Se déconnecter</a></li>
-      </ul>
+  
+
+    <div class="dropdown">
+      <button class="dropbtn">Mon espace</button>
+      <div class="dropdown-content">
+      <a href="myaccount.php">Mon profil</a>
+      <a href="parametres.php">Parametres du compte</a>
+      <a href="deconnexion.php">Se déconnecter</a>
+      </div>
     </div>
 
  

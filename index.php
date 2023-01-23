@@ -8,7 +8,7 @@ require_once ("./config.login.php");?>
 <!--CONTENT-->
 
 <?php 
-if(!empty($_SESSION["nom"] && $_SESSION["prenom"] && $_SESSION['email'])){
+if(!empty($_SESSION["nom"]) && ($_SESSION["prenom"]) && ($_SESSION['email'])){
   ?>
   <div class="text" style="display:none">
     <h1>LIVRAISON DE REPAS DIÉTÉTIQUES</h1>
@@ -16,7 +16,7 @@ if(!empty($_SESSION["nom"] && $_SESSION["prenom"] && $_SESSION['email'])){
   </div>
 
   <div class="text">
-    <h1>Hello,<?php  echo $_SESSION['prenom'];?></h1>
+    <h1>Hello <?php  echo $_SESSION['prenom'];?>, <br> Bienvenue chez NICE EAT </h1>
   </div>
   <?php }else {?> 
     <div class="text">

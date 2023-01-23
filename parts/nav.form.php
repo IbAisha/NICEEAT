@@ -1,7 +1,3 @@
-<?php
-
-ob_start(); ?> 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,5 +15,3 @@ ob_start(); ?>
 <script src="main.js"></script>
 </body>
 </html>
-
-<?php ob_end_flush(); ?>

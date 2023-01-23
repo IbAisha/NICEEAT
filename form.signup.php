@@ -1,7 +1,6 @@
 <?php 
     require_once "./parts/nav.style.php";
     require_once "./parts/nav.form.php";
-    ;
     ?> 
   
         <div id="formCase">

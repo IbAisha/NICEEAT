@@ -21,7 +21,9 @@ if(isset($_POST['button'])){
                 $query = "SELECT * FROM users";
                 $result = mysqli_query($link, $query);
                 $row = mysqli_fetch_row($result); ?>
-                <?php }
+                <?php }else{
+                        echo "votre inscription n'a pas été prise en compte";
+                }
                                
         }
 }
