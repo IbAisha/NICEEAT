@@ -6,6 +6,7 @@ function session($nom, $prenom) {
     $_SESSION['nom']= $nom;
     $_SESSION['prenom']= $prenom;
     $_SESSION['email']= $_POST['email'];
+    $_SESSION['pswd']=$_POST['pswd'];
 }
 
 
@@ -23,14 +24,15 @@ function connexion() {
 
             if (!$res || !password_verify($pswd, $res[4])){?>
                 <span style="color:red"> Email ou mot de passe incorrect</span> <?php
-            }else if(!empty($email) && !empty($pswd) && password_verify($pswd, $res[4])) {
+            }elseif(!empty($email) && !empty($pswd) && password_verify($pswd, $res[4]) && $res[5] == 1){
+                session($res[1], $res[2]);
+                   header("Location: menus.admin.php");
+            }elseif(!empty($email) && !empty($pswd) && password_verify($pswd, $res[4])) {
                 session($res[1], $res[2]);
                    header("Location: index.php");
                    exit(0);
-              } else if(empty($email) || empty($pswd)){?> 
+            } else if(empty($email) || empty($pswd)){?> 
                 <span>Veuillez entrer les champs obligatoires</span><?php
-
-                var_dump($email, $pswd);
                   
               }
          }

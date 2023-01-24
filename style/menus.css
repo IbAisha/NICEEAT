@@ -13,7 +13,7 @@ nav {
     background-color: #FCF8F1;
     opacity: 0.8;
     top: 0;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
 
@@ -224,6 +224,39 @@ p {
     background-color: #FFDC62;
   }
 
+     /*click and collect*/
+
+iframe {
+    transform: scale(0.7);
+}
+
+
+/*Profil*/
+
+#profile-infos {
+    margin: 5% 5%;
+    padding: 10px 15px 100px;
+    border: 0.5px grey solid;
+}
+.profile-title {
+    padding-bottom: 50px;
+}
+
+.position-sb {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-family: 'Quicksand', 'sans serif';
+}
+.position-sb>a {
+    text-decoration: none;
+    color: grey;
+    font-style: italic;
+}
+
+.position-sb>a:hover {
+    text-decoration: underline;
+}
 
   
 /* MEDIA QUERIES */
