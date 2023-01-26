@@ -139,7 +139,8 @@ ul li>a:hover {
 
 }
 
-h1 {
+
+h1, h2 {
     text-align: center;
     text-decoration: underline #FFDC62;
 
@@ -233,7 +234,7 @@ iframe {
 
 /*Profil*/
 
-#profile-infos {
+.profile-infos {
     margin: 5% 5%;
     padding: 10px 15px 100px;
     border: 0.5px grey solid;
@@ -310,7 +311,4 @@ footer {
     padding: 0.5rem 0;
 }
 
-#deconnexion {
-
-}
 }

@@ -13,7 +13,8 @@
 
        <h2 class="textCenter">Connectez-vous</h2>
 
-       <?php require("config.login.php"); ?>
+       <?php require("config.login.php"); 
+       ?>
 
        <div class="center" id="input">
            <div id="emailInput">

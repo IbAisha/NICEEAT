@@ -1,7 +1,7 @@
 <?php 
 
        
-            $connexion = mysqli_connect('localhost', 'root', 'root', 'nice_eat');
+            $connexion= mysqli_connect('localhost', 'root', 'root', 'nice_eat');
             $req = mysqli_query($connexion, "SELECT * FROM `users`");
             $num_ligne = mysqli_num_rows($req); // compter le nombre de ligne ayant rapport a la requete SQL
             $res = mysqli_fetch_row($req);
@@ -25,7 +25,7 @@ if(isset($_POST['button'])){
                 ?> <div class="valid-box">
                         <p style="color:green">Inscription enrigstrée</p>
 
-                </div><?php;  }else{
+                </div><?php }else{
                         echo "votre inscription n'a pas été prise en compte";
                 }
                                

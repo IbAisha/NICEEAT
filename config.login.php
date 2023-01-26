@@ -2,7 +2,8 @@
 
 //PARTIE CONNEXION 
 
-function session($nom, $prenom) {
+function session($id, $nom, $prenom) {
+    $_SESSION['id']= $id;
     $_SESSION['nom']= $nom;
     $_SESSION['prenom']= $prenom;
     $_SESSION['email']= $_POST['email'];
@@ -25,10 +26,10 @@ function connexion() {
             if (!$res || !password_verify($pswd, $res[4])){?>
                 <span style="color:red"> Email ou mot de passe incorrect</span> <?php
             }elseif(!empty($email) && !empty($pswd) && password_verify($pswd, $res[4]) && $res[5] == 1){
-                session($res[1], $res[2]);
+                session($res[0], $res[1], $res[2]);
                    header("Location: menus.admin.php");
             }elseif(!empty($email) && !empty($pswd) && password_verify($pswd, $res[4])) {
-                session($res[1], $res[2]);
+                session($rees[0],$res[1], $res[2]);
                    header("Location: index.php");
                    exit(0);
             } else if(empty($email) || empty($pswd)){?> 

@@ -46,8 +46,9 @@
       <button class="dropbtn">Mon espace</button>
       <div class="dropdown-content">
       <a href="myaccount.php">Mon profil</a>
-      <a href="settings.php">Paramètres du compte</a>
+      <a href="favoris.php">Mes favoris</a>    
       <a href="deconnexion.php">Se déconnecter</a>
+      
       </div>
     </div>
  
